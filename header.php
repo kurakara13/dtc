@@ -57,7 +57,7 @@
 							'theme_location'  => 'menu-1',
 							'menu_class'      => 'navbar-nav ms-auto mb-2 mb-lg-0',
 							'container'       => false,
-							'fallback_cb'     => '__return_false',
+							'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
 							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 							'depth'           => 2,
 							'walker'          => new WP_Bootstrap_Navwalker(),
