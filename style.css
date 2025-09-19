@@ -967,3 +967,68 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+/*--------------------------------------------------------------
+# Homepage
+--------------------------------------------------------------*/
+
+/* General Container
+--------------------------------------------- */
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+
+/* Remove sidebar gap on homepage */
+.home.no-sidebar .site-content {
+	width: 100%;
+}
+
+/* Hero Section
+--------------------------------------------- */
+.homepage-hero {
+	background-color: #1a1a1a;
+	color: #fff;
+	padding: 6em 0;
+	text-align: center;
+	margin-bottom: 3em;
+}
+
+.hero-title {
+	font-size: 3em;
+	margin-top: 0;
+	margin-bottom: 0.25em;
+	font-weight: 700;
+}
+
+.hero-subtitle {
+	font-size: 1.25em;
+	margin-bottom: 2em;
+	opacity: 0.8;
+}
+
+.hero-button {
+	background-color: #4169e1;
+	color: #fff;
+	padding: 14px 32px;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+	background-color: #191970;
+	color: #fff;
+}
+
+/* Homepage Sections
+--------------------------------------------- */
+.section-title {
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 1.5em;
+}
