@@ -1,0 +1,185 @@
+/*--------------------------------------------------------------
+# Easy Digital Downloads
+--------------------------------------------------------------*/
+
+/* Single Product Page Layout
+--------------------------------------------- */
+.product-content-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2em;
+}
+
+@media screen and (min-width: 768px) {
+	.product-content-wrapper {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.product-gallery img {
+	border-radius: 4px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.product-price {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 1em;
+	color: #1a1a1a;
+}
+
+.edd-add-to-cart,
+.edd-go-to-checkout {
+	background-color: #4169e1;
+	color: #fff;
+	border: none;
+	padding: 12px 24px;
+	font-size: 1em;
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	transition: background-color 0.3s ease;
+}
+
+.edd-add-to-cart:hover,
+.edd-go-to-checkout:hover {
+	background-color: #191970;
+	color: #fff;
+}
+
+/* Product Archive (Grid) Layout
+--------------------------------------------- */
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 2em;
+	margin-bottom: 2em;
+}
+
+.product-card {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.product-card__image a {
+	display: block;
+}
+
+.product-card__image img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.product-card__header,
+.product-card__meta {
+	padding: 1em;
+}
+
+.product-card__header {
+	flex-grow: 1;
+}
+
+.product-card__title {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.product-card__title a {
+	text-decoration: none;
+	color: #333;
+}
+
+.product-card__meta {
+	border-top: 1px solid #e0e0e0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.product-card__price {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.product-card .edd-add-to-cart {
+	padding: 8px 16px;
+	font-size: 0.9em;
+}
+
+/*--------------------------------------------------------------
+# Homepage
+--------------------------------------------------------------*/
+
+/* General Container
+--------------------------------------------- */
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+
+/* Remove sidebar gap on homepage */
+.home.no-sidebar .site-content {
+	width: 100%;
+}
+
+/* Hero Section
+--------------------------------------------- */
+.homepage-hero {
+	background-color: #1a1a1a;
+	color: #fff;
+	padding: 6em 0;
+	text-align: center;
+	margin-bottom: 3em;
+}
+
+.hero-title {
+	font-size: 3em;
+	margin-top: 0;
+	margin-bottom: 0.25em;
+	font-weight: 700;
+}
+
+.hero-subtitle {
+	font-size: 1.25em;
+	margin-bottom: 2em;
+	opacity: 0.8;
+}
+
+.hero-button {
+	background-color: #4169e1;
+	color: #fff;
+	padding: 14px 32px;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+	background-color: #191970;
+	color: #fff;
+}
+
+/* Homepage Sections
+--------------------------------------------- */
+.section-title {
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 1.5em;
+}

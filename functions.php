@@ -141,6 +141,9 @@ function dtc_scripts() {
 	wp_enqueue_style( 'dtc-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'dtc-style', 'rtl', 'replace' );
 
+	// Enqueue our custom stylesheet.
+	wp_enqueue_style( 'dtc-main-style', get_template_directory_uri() . '/assets/css/main.css', array( 'dtc-style' ), false );
+
 	wp_enqueue_script( 'dtc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
