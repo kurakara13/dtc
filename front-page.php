@@ -33,12 +33,14 @@ get_header();
 				?>
 
 				<?php if ( $latest_products_query->have_posts() ) : ?>
-					<div class="product-grid">
+					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 						<?php
 						while ( $latest_products_query->have_posts() ) :
 							$latest_products_query->the_post();
-							// We can reuse the product card template from our archive page
-							get_template_part( 'template-parts/content', 'download-archive' );
+							echo '<div class="col">';
+								// We can reuse the product card template from our archive page
+								get_template_part( 'template-parts/content', 'download-archive' );
+							echo '</div>';
 						endwhile;
 						?>
 					</div><!-- .product-grid -->

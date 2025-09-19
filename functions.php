@@ -138,17 +138,23 @@ add_action( 'widgets_init', 'dtc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dtc_scripts() {
+	// Enqueue Bootstrap CSS.
+	wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', array(), '5.3.2' );
+
 	wp_enqueue_style( 'dtc-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'dtc-style', 'rtl', 'replace' );
 
 	// Enqueue our custom stylesheet.
-	wp_enqueue_style( 'dtc-main-style', get_template_directory_uri() . '/assets/css/main.css', array( 'dtc-style' ), false );
+	wp_enqueue_style( 'dtc-main-style', get_template_directory_uri() . '/assets/css/main.css', array( 'bootstrap-css', 'dtc-style' ), false );
 
 	wp_enqueue_script( 'dtc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Enqueue Bootstrap JS.
+	wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', array(), '5.3.2', true );
 }
 add_action( 'wp_enqueue_scripts', 'dtc_scripts' );
 
@@ -185,4 +191,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 	require get_template_directory() . '/inc/edd.php';
 }
+
+/**
+ * Register Custom Navigation Walker
+ */
+require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 

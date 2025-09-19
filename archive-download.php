@@ -22,12 +22,14 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<div class="product-grid">
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
-					get_template_part( 'template-parts/content', 'download-archive' );
+					echo '<div class="col">';
+						get_template_part( 'template-parts/content', 'download-archive' );
+					echo '</div>';
 				endwhile;
 				?>
 			</div><!-- .product-grid -->
