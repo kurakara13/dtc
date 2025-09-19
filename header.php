@@ -55,6 +55,7 @@
 					wp_nav_menu(
 						array(
 							'theme_location'  => 'menu-1',
+							'menu_id'        => 'primary-menu',
 							'menu_class'      => 'navbar-nav ms-auto mb-2 mb-lg-0',
 							'container'       => false,
 							'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
