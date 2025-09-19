@@ -1,4 +1,49 @@
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.site-branding .custom-logo {
+	max-height: 40px;
+	width: auto;
+}
+
+.site-branding .navbar-brand {
+	font-weight: bold;
+}
+
+.main-navigation .navbar-nav .nav-link {
+	font-weight: 500;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.header-actions .search-form {
+	min-width: 200px;
+}
+
+.header-actions .cart-contents {
+	text-decoration: none;
+	position: relative;
+	font-size: 1.5rem;
+}
+
+.header-actions .edd-cart-quantity {
+	position: absolute;
+	top: -5px;
+	right: -10px;
+	background-color: #4169e1;
+	color: #fff;
+	border-radius: 50%;
+	font-size: 0.7rem;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+}
+/*--------------------------------------------------------------
 # Easy Digital Downloads
 --------------------------------------------------------------*/
 
