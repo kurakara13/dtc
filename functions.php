@@ -176,3 +176,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load Easy Digital Downloads compatibility file.
+ */
+if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+	require get_template_directory() . '/inc/edd.php';
+}
+
