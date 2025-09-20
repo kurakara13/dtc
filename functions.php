@@ -155,6 +155,9 @@ function dtc_scripts() {
 
 	// Enqueue Bootstrap JS.
 	wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', array(), '5.3.2', true );
+
+	// Enqueue custom header script
+	wp_enqueue_script( 'dtc-header-script', get_template_directory_uri() . '/assets/js/header.js', array( 'bootstrap-js' ), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'dtc_scripts' );
 
@@ -196,4 +199,3 @@ if ( class_exists( 'Easy_Digital_Downloads' ) ) {
  * Register Custom Navigation Walker
  */
 require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-
